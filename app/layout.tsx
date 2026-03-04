@@ -11,19 +11,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Solidy | Seguro Auto Inteligente',
   description:
-    'Proteção total para seu carro. Seguro auto inteligente, rápido e sem complicação. Simule agora e receba sua cotação em 1 minuto.',
+    'Protecao total para seu carro. Seguro auto inteligente, rapido e sem complicacao. Simule agora e receba sua cotacao em 1 minuto.',
   keywords: [
     'seguro auto',
     'seguro carro',
-    'proteção veicular',
+    'protecao veicular',
     'seguro online',
-    'cotação seguro',
+    'cotacao seguro',
     'Solidy',
   ],
   openGraph: {
     title: 'Solidy | Seguro Auto Inteligente',
     description:
-      'Proteção total para seu carro. Seguro auto inteligente, rápido e sem complicação.',
+      'Protecao total para seu carro. Seguro auto inteligente, rapido e sem complicacao.',
     type: 'website',
     locale: 'pt_BR',
     siteName: 'Solidy',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#F5C518',
   width: 'device-width',
   initialScale: 1,
 }
