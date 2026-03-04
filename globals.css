@@ -37,6 +37,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Solidy brand colors - Yellow dominant, Blue accent, Green secondary */
+  --solidy-yellow: #F5C518;
+  --solidy-yellow-hover: #E0B200;
+  --solidy-blue: #1B3A6B;
+  --solidy-blue-hover: #142D54;
+  --solidy-green: #2E8B57;
+  --solidy-green-hover: #256F46;
 }
 
 .dark {
@@ -75,7 +83,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -113,6 +121,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Solidy brand colors */
+  --color-solidy-yellow: var(--solidy-yellow);
+  --color-solidy-yellow-hover: var(--solidy-yellow-hover);
+  --color-solidy-blue: var(--solidy-blue);
+  --color-solidy-blue-hover: var(--solidy-blue-hover);
+  --color-solidy-green: var(--solidy-green);
+  --color-solidy-green-hover: var(--solidy-green-hover);
 }
 
 @layer base {
@@ -122,4 +138,60 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Pulse glow animation for CTA buttons */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 197, 24, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px rgba(245, 197, 24, 0.2);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Smooth section reveal */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer effect for highlights */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
