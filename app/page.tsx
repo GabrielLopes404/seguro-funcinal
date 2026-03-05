@@ -8,20 +8,33 @@ import { Differentials } from "@/components/differentials"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
 import { ScrollProgress } from "@/components/scroll-progress"
+import { SectionTransition } from "@/components/section-transition"
 
 export default function Home() {
   return (
     <>
       <ScrollProgress />
       <Header />
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
-        <HowItWorks />
-        <Benefits />
-        <SocialProof />
-        <SimulationForm />
-        <Differentials />
-        <FinalCTA />
+        <SectionTransition>
+          <HowItWorks />
+        </SectionTransition>
+        <SectionTransition delay={0.1}>
+          <Benefits />
+        </SectionTransition>
+        <SectionTransition delay={0.05}>
+          <SocialProof />
+        </SectionTransition>
+        <SectionTransition delay={0.1}>
+          <SimulationForm />
+        </SectionTransition>
+        <SectionTransition delay={0.05}>
+          <Differentials />
+        </SectionTransition>
+        <SectionTransition delay={0.1}>
+          <FinalCTA />
+        </SectionTransition>
       </main>
       <Footer />
     </>
